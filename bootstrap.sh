@@ -16,7 +16,7 @@ export LESS="MRc"
 export PAGER="less"
 export PATH="\$HOME/.local/bin:\$PATH"
 export VISUAL="vim"
-if [[ -f "$prefix/share/bash-completion/bash_competion" ]]; then
-  . "$prefix/share/bash-completion/bash_competion"
+if [[ -f "$prefix/share/bash-completion/bash_completion" ]]; then
+  . "$prefix/share/bash-completion/bash_completion"
 fi
 E0F
