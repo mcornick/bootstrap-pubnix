@@ -19,4 +19,11 @@ export VISUAL="vim"
 if [[ -f "$prefix/share/bash-completion/bash_completion" ]]; then
   . "$prefix/share/bash-completion/bash_completion"
 fi
+case "$TERM" in
+xterm*)
+  PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD}\007"'
+  ;;
+*)
+  ;;
+esac
 E0F
