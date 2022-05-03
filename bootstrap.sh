@@ -4,7 +4,6 @@ prefix=$(dirname "$(dirname "$(which vim)")")
 echo 'logout' > $HOME/.bash_logout
 # shellcheck disable=SC2016
 echo '. "$HOME/.bashrc"' > $HOME/.bash_profile
-cp /dev/null $HOME/.hushlogin
 echo 'set completion-ignore-case On' > $HOME/.inputrc
 cat << E0F > $HOME/.bashrc
 PS1="\\u@\\h:\\w\\\$ "
