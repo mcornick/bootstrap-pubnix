@@ -1,11 +1,12 @@
 #!/bin/sh -e
 # SPDX-License-Identifier: CC0
 prefix=$(dirname "$(dirname "$(which vim)")")
-echo 'logout' > $HOME/.bash_logout
+touch "$HOME/.bashrc.local"
+echo 'logout' > "$HOME/.bash_logout"
 # shellcheck disable=SC2016
-echo '. "$HOME/.bashrc"' > $HOME/.bash_profile
-echo 'set completion-ignore-case On' > $HOME/.inputrc
-cat << E0F > $HOME/.bashrc
+echo '. "$HOME/.bashrc"' > "$HOME/.bash_profile"
+echo 'set completion-ignore-case On' > "$HOME/.inputrc"
+cat << E0F > "$HOME/.bashrc"
 PS1="\\u@\\h:\\w\\\$ "
 alias vi="vim"
 export EDITOR="vim"
@@ -20,9 +21,10 @@ if [[ -f "$prefix/share/bash-completion/bash_completion" ]]; then
 fi
 case "$TERM" in
 xterm*)
-  PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD}\007"'
+  PROMPT_COMMAND='echo -ne "\033]0;\${USER}@\${HOSTNAME}: \${PWD}\007"'
   ;;
 *)
   ;;
 esac
+. "\$HOME/.bashrc.local"
 E0F
