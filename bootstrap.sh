@@ -15,6 +15,7 @@ export LC_ALL="en_US.UTF-8"
 export LESS="MRc"
 export PAGER="less"
 export PATH="\$HOME/.local/bin:\$PATH"
+export TZ="America/New_York"
 export VISUAL="vim"
 if [[ -f "$prefix/share/bash-completion/bash_completion" ]]; then
   . "$prefix/share/bash-completion/bash_completion"
