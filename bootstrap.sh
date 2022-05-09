@@ -28,3 +28,30 @@ xterm*)
 esac
 . "\$HOME/.bashrc.local"
 E0F
+cat << E0F > "$HOME/.bashrc"
+filetype plugin indent on
+syntax enable
+nnoremap <silent> <C-L> :nohlsearch<C-R>=has('diff')?'<Bar>diffupdate':''<CR><CR><C-L>
+set autoindent
+set autoread
+set background=dark
+set backspace=indent,eol,start
+set complete-=i
+set display+=lastline
+set encoding=utf-8
+set formatoptions+=j
+set history=1000
+set incsearch
+set laststatus=2
+set nrformats-=octal
+set ruler
+set scrolloff=1
+set sessionoptions-=options
+set sidescrolloff=5
+set smarttab
+set tabpagemax=50
+set ttimeout
+set ttimeoutlen=100
+set viewoptions-=options
+set wildmenu
+E0F
