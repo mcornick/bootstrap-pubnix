@@ -28,7 +28,7 @@ xterm*)
 esac
 . "\$HOME/.bashrc.local"
 E0F
-cat << E0F > "$HOME/.bashrc"
+cat << E0F > "$HOME/.vimrc"
 filetype plugin indent on
 syntax enable
 nnoremap <silent> <C-L> :nohlsearch<C-R>=has('diff')?'<Bar>diffupdate':''<CR><CR><C-L>
