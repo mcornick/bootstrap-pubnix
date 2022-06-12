@@ -24,7 +24,7 @@ if [[ -f "$prefix/share/bash-completion/bash_completion" ]]; then
 fi
 case "\$TERM" in
 xterm*)
-  PROMPT_COMMAND='echo -ne "\033]0;\${USER}@\${HOSTNAME}: \${PWD}\007"'
+  PROMPT_COMMAND='echo -ne "\033]0;\${USER}@\${HOSTNAME}:\${PWD}\007"'
   ;;
 *)
   ;;
@@ -78,7 +78,7 @@ export TZ="America/New_York"
 export VISUAL="vim"
 case "\$TERM" in
 xterm*)
-  PROMPT_COMMAND='echo -ne "\033]0;\${USER}@\${HOSTNAME}: \${PWD}\007"'
+  precmd() {print -Pn "\e]0;%n@%m:%~\a"}
   ;;
 *)
   ;;
