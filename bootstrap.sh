@@ -59,7 +59,7 @@ set viewoptions-=options
 set wildmenu
 E0F
 cat << E0F > "$HOME/.zshrc"
-PS1="%n@%m:%~:%# "
+PS1="%n@%m:%~%# "
 HISTFILE=\$HOME/.zsh_history
 HISTSIZE=2000
 SAVEHIST=1000
