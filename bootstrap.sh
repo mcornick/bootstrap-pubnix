@@ -3,6 +3,7 @@
 prefix=$(dirname "$(dirname "$(which vim)")")
 touch "$HOME/.bashrc.local"
 echo 'logout' > "$HOME/.bash_logout"
+echo 'logout' > "$HOME/.zlogout"
 # shellcheck disable=SC2016
 echo '. "$HOME/.bashrc"' > "$HOME/.profile"
 echo 'set completion-ignore-case On' > "$HOME/.inputrc"
@@ -56,4 +57,31 @@ set ttimeout
 set ttimeoutlen=100
 set viewoptions-=options
 set wildmenu
+E0F
+cat << E0F > "$HOME/.zshrc"
+PS1="%n@%m:1~:%# "
+HISTFILE=\$HOME/.zsh_history
+HISTSIZE=2000
+SAVEHIST=1000
+setopt HIST_IGNORE_DUPS
+zstyle ':completion:*' completer _complete _ignored
+zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}'
+alias tmux="tmux attach || tmux"
+alias vi="vim"
+export EDITOR="vim"
+export LANG="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
+export LESS="MRc"
+export PAGER="less"
+export PATH="\$HOME/.local/bin:\$PATH"
+export TZ="America/New_York"
+export VISUAL="vim"
+case "\$TERM" in
+xterm*)
+  PROMPT_COMMAND='echo -ne "\033]0;\${USER}@\${HOSTNAME}: \${PWD}\007"'
+  ;;
+*)
+  ;;
+esac
+. "\$HOME/.bashrc.local"
 E0F
