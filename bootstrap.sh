@@ -5,7 +5,7 @@ touch "$HOME/.bashrc.local"
 echo 'logout' > "$HOME/.bash_logout"
 echo 'logout' > "$HOME/.zlogout"
 # shellcheck disable=SC2016
-echo '. "$HOME/.bashrc"' > "$HOME/.profile"
+echo '. "$HOME/.bashrc"' > "$HOME/.bash_profile"
 echo 'set completion-ignore-case On' > "$HOME/.inputrc"
 cat << E0F > "$HOME/.bashrc"
 PS1="\\u@\\h:\\w\\\$ "
