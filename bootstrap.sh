@@ -6,6 +6,7 @@ echo 'logout' > "$HOME/.bash_logout"
 echo 'logout' > "$HOME/.zlogout"
 # shellcheck disable=SC2016
 echo '. "$HOME/.bashrc"' > "$HOME/.bash_profile"
+# shellcheck disable=SC2016
 echo '. "$HOME/.bash_profile.local"' >> "$HOME/.bash_profile"
 echo 'set completion-ignore-case On' > "$HOME/.inputrc"
 cat << E0F > "$HOME/.bashrc"
