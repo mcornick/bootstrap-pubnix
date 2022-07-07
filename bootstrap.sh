@@ -1,6 +1,5 @@
 #!/bin/sh -e
 # SPDX-License-Identifier: CC0
-prefix=$(dirname "$(dirname "$(which vim)")")
 touch "$HOME/.bashrc.local" "$HOME/.bash_profile.local"
 echo 'logout' > "$HOME/.bash_logout"
 echo 'logout' > "$HOME/.zlogout"
@@ -21,9 +20,11 @@ export PAGER="less"
 export PATH="\$HOME/.local/bin:\$PATH"
 export TZ="America/New_York"
 export VISUAL="vim"
-if [[ -f "$prefix/share/bash-completion/bash_completion" ]]; then
-  . "$prefix/share/bash-completion/bash_completion"
+prefix=\$(dirname "\$(dirname "\$(which vim)")")
+if [[ -f "\$prefix/share/bash-completion/bash_completion" ]]; then
+  . "\$prefix/share/bash-completion/bash_completion"
 fi
+unset prefix
 case "\$TERM" in
 xterm*)
   PROMPT_COMMAND='echo -ne "\033]0;\${USER}@\${HOSTNAME}:\${PWD}\007"'
