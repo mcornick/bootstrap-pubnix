@@ -35,6 +35,7 @@ esac
 . "\$HOME/.bashrc.local"
 E0F
 cat << E0F > "$HOME/.vimrc"
+source ~/.vimrc.local.before
 filetype plugin indent on
 syntax enable
 nnoremap <silent> <C-L> :nohlsearch<C-R>=has('diff')?'<Bar>diffupdate':''<CR><CR><C-L>
@@ -60,7 +61,9 @@ set ttimeout
 set ttimeoutlen=100
 set viewoptions-=options
 set wildmenu
+source ~/.vimrc.local.after
 E0F
+touch "$HOME/.vimrc.local.before" "$HOME/.vimrc.local.after"
 cat << E0F > "$HOME/.zshrc"
 PS1="%n@%m:%~%# "
 HISTFILE=\$HOME/.zsh_history
