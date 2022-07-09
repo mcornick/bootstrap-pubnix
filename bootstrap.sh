@@ -103,4 +103,6 @@ set -g default-terminal "screen-256color"
 set -g status-keys emacs
 set -g focus-events on
 setw -g aggressive-resize on
+source-file ~/.tmux.conf.local
 E0F
+touch "$HOME/.tmux.conf.local"
