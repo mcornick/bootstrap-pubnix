@@ -10,7 +10,6 @@ echo '. "$HOME/.bash_profile.local"' >> "$HOME/.bash_profile"
 echo 'set completion-ignore-case On' > "$HOME/.inputrc"
 cat << E0F > "$HOME/.bashrc"
 PS1="\\u@\\h:\\w\\\$ "
-alias tmux="tmux attach || tmux"
 alias vi="vim"
 export EDITOR="vim"
 export LANG="en_US.UTF-8"
@@ -72,7 +71,6 @@ SAVEHIST=1000
 setopt HIST_IGNORE_DUPS
 zstyle ':completion:*' completer _complete _ignored
 zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}'
-alias tmux="tmux attach || tmux"
 alias vi="vim"
 export EDITOR="vim"
 export LANG="en_US.UTF-8"
