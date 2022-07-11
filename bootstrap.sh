@@ -1,8 +1,8 @@
 #!/bin/sh -e
 # SPDX-License-Identifier: CC0
 touch "$HOME/.bashrc.local" "$HOME/.bash_profile.local"
-echo 'logout' > "$HOME/.bash_logout"
-echo 'logout' > "$HOME/.zlogout"
+echo 'clear' > "$HOME/.bash_logout"
+echo 'clear' > "$HOME/.zlogout"
 # shellcheck disable=SC2016
 echo '. "$HOME/.bashrc"' > "$HOME/.bash_profile"
 # shellcheck disable=SC2016
