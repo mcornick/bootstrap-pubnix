@@ -2,7 +2,6 @@
 # SPDX-License-Identifier: CC0
 touch "$HOME/.bashrc.local" "$HOME/.bash_profile.local"
 echo 'clear' > "$HOME/.bash_logout"
-echo 'clear' > "$HOME/.zlogout"
 # shellcheck disable=SC2016
 echo '. "$HOME/.bashrc"' > "$HOME/.bash_profile"
 # shellcheck disable=SC2016
@@ -62,32 +61,6 @@ set wildmenu
 source ~/.vimrc.local
 E0F
 touch "$HOME/.vimrc.local"
-cat << E0F > "$HOME/.zshrc"
-PS1="%n@%m:%~%# "
-HISTFILE=\$HOME/.zsh_history
-HISTSIZE=2000
-SAVEHIST=1000
-setopt HIST_IGNORE_DUPS
-zstyle ':completion:*' completer _complete _ignored
-zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}'
-alias vi="vim"
-export EDITOR="vim"
-export LANG="en_US.UTF-8"
-export LC_ALL="en_US.UTF-8"
-export LESS="FXMRc"
-export PAGER="less"
-export PATH="\$HOME/.local/bin:\$PATH"
-export TZ="America/New_York"
-export VISUAL="vim"
-case "\$TERM" in
-xterm*)
-  precmd() {print -Pn "\e]0;%n@%m:%~\a"}
-  ;;
-*)
-  ;;
-esac
-. "\$HOME/.bashrc.local"
-E0F
 cat << E0F > "$HOME/.tmux.conf"
 unbind C-b
 set-option -g prefix C-a
