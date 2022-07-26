@@ -62,9 +62,6 @@ source ~/.vimrc.local
 E0F
 touch "$HOME/.vimrc.local"
 cat << E0F > "$HOME/.tmux.conf"
-unbind C-b
-set-option -g prefix C-a
-bind-key C-a send-prefix
 set -s escape-time 0
 set -g history-limit 50000
 set -g display-time 4000
