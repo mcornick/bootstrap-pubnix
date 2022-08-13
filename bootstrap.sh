@@ -74,3 +74,16 @@ setw -g aggressive-resize on
 source-file ~/.tmux.conf.local
 E0F
 touch "$HOME/.tmux.conf.local"
+git config --global branch.autosetupmerge 'true'
+git config --global color.ui 'auto'
+git config --global core.autocrlf 'input'
+git config --global core.editor 'vim'
+git config --global core.excludesfile '~/.gitignore_global'
+git config --global diff.mnemonicprefix 'true'
+git config --global init.defaultBranch 'main'
+git config --global pull.rebase 'false'
+git config --global push.default 'current'
+git config --global push.followTags 'true'
+git config --global rerere.enabled 'true'
+git config --global user.email 'mcornick@mcornick.com'
+git config --global user.name 'Mark Cornick'
