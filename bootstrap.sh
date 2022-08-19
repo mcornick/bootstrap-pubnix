@@ -75,6 +75,7 @@ git config --global branch.autosetupmerge 'true'
 git config --global color.ui 'auto'
 git config --global core.autocrlf 'input'
 git config --global core.editor 'vim'
+# shellcheck disable=SC2088
 git config --global core.excludesfile '~/.gitignore_global'
 git config --global diff.mnemonicprefix 'true'
 git config --global init.defaultBranch 'main'
