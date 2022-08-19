@@ -2,10 +2,7 @@
 # SPDX-License-Identifier: CC0
 touch "$HOME/.bashrc.local" "$HOME/.bash_profile.local"
 echo 'clear' > "$HOME/.bash_logout"
-# shellcheck disable=SC2016
-echo '. "$HOME/.bashrc"' > "$HOME/.bash_profile"
-# shellcheck disable=SC2016
-echo '. "$HOME/.bash_profile.local"' >> "$HOME/.bash_profile"
+printf ". \"\$HOME/.bashrc\"\n. \"\$HOME/.bash_profile.local\"\n" > "$HOME/.bash_profile"
 echo 'set completion-ignore-case On' > "$HOME/.inputrc"
 cat << E0F > "$HOME/.bashrc"
 set -o vi
