@@ -5,6 +5,7 @@ echo 'clear' > "$HOME/.bash_logout"
 printf ". \"\$HOME/.bashrc\"\n. \"\$HOME/.bash_profile.local\"\n" > "$HOME/.bash_profile"
 echo 'set completion-ignore-case On' > "$HOME/.inputrc"
 cat << E0F > "$HOME/.bashrc"
+set -o emacs
 PS1="\\u@\\h:\\w\\\$ "
 alias vi="vim"
 export EDITOR="vim"
