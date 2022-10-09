@@ -42,20 +42,33 @@ set complete-=i
 set display+=lastline
 set encoding=utf-8
 set formatoptions+=j
+set hidden
 set history=1000
+set ignorecase
 set incsearch
 set laststatus=2
+set modeline
+set mouse=a
 set nrformats-=octal
+set number
+set pastetoggle=<leader>p
+set relativenumber
 set ruler
 set scrolloff=1
 set sessionoptions-=options
 set sidescrolloff=5
+set smartcase
 set smarttab
 set tabpagemax=50
 set ttimeout
 set ttimeoutlen=100
 set viewoptions-=options
 set wildmenu
+autocmd BufRead,BufNewFile *.md set filetype=markdown textwidth=72
+autocmd BufRead,BufNewFile *.mdoc set filetype=nroff
+autocmd FileType python setlocal completeopt-=preview textwidth=79
+nnoremap <SPACE> <Nop>
+let mapleader=" "
 source ~/.vimrc.local
 E0F
 touch "$HOME/.vimrc.local"
