@@ -73,6 +73,12 @@ source ~/.vimrc.local
 E0F
 touch "$HOME/.vimrc.local"
 cat << E0F > "$HOME/.tmux.conf"
+unbind C-b
+set-option -g prefix C-a
+bind C-a send-prefix
+set-option -g status-right "#(whoami)@#(hostname -s) %R %v"
+set -g status-right-length 50
+set -g status-left-length 20
 set -s escape-time 0
 set -g history-limit 50000
 set -g display-time 4000
