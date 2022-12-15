@@ -59,6 +59,7 @@ set sessionoptions-=options
 set sidescrolloff=5
 set smartcase
 set smarttab
+set statusline=%f\ %m\ %r\ %=\ %y\ %l/%L
 set tabpagemax=50
 set ttimeout
 set ttimeoutlen=100
