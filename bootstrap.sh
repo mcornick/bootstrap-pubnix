@@ -50,16 +50,14 @@ set laststatus=2
 set modeline
 set mouse=a
 set nrformats-=octal
-set number
 set pastetoggle=<leader>p
-set relativenumber
 set ruler
 set scrolloff=1
 set sessionoptions-=options
 set sidescrolloff=5
 set smartcase
 set smarttab
-set statusline=%f\ %m\ %r\ %=\ %y\ %l/%L
+set statusline=%f\ %m\ %r\ %=\ %y\ %l,%c
 set tabpagemax=50
 set ttimeout
 set ttimeoutlen=100
