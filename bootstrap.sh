@@ -74,7 +74,7 @@ cat << E0F > "$HOME/.tmux.conf"
 unbind C-b
 set-option -g prefix C-a
 bind C-a send-prefix
-set-option -g status-right "#(whoami)@#(hostname -s) %R %e-%b-%Y"
+set-option -g status-right "#(whoami)@#(hostname -s) %X %x"
 set -g status-right-length 50
 set -g status-left-length 20
 set -s escape-time 0
