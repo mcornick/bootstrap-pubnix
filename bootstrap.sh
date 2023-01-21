@@ -8,6 +8,7 @@ echo 'set completion-ignore-case On' > "$HOME/.inputrc"
 cat << E0F > "$HOME/.bashrc"
 set -o emacs
 PS1="\\u@\\h:\\w\\\$ "
+alias ls="ls -F"
 alias vi="vim"
 export EDITOR="vim"
 export LANG="en_US.UTF-8"
