@@ -103,3 +103,5 @@ git config --global push.followTags 'true'
 git config --global rerere.enabled 'true'
 git config --global user.email 'mcornick@mcornick.com'
 git config --global user.name 'Mark Cornick'
+touch "$HOME/bootstrap.sh.local"
+. "$HOME/bootstrap.sh.local"
