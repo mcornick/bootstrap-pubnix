@@ -2,9 +2,9 @@
 # SPDX-License-Identifier: CC0
 prefix=$(dirname "$(dirname "$(which vim)")")
 touch "$HOME/.bashrc.local" "$HOME/.bash_profile.local"
-echo 'clear' > "$HOME/.bash_logout"
+printf "clear\n" > "$HOME/.bash_logout"
 printf ". \"\$HOME/.bashrc\"\n. \"\$HOME/.bash_profile.local\"\n" > "$HOME/.bash_profile"
-echo 'set completion-ignore-case On' > "$HOME/.inputrc"
+printf "set completion-ignore-case On\n" > "$HOME/.inputrc"
 cat << E0F > "$HOME/.bashrc"
 set -o emacs
 PS1="\\u@\\h:\\w\\\$ "
