@@ -89,19 +89,19 @@ setw -g aggressive-resize on
 source-file ~/.tmux.conf.local
 E0F
 touch "$HOME/.tmux.conf.local"
-git config --global branch.autosetupmerge 'true'
-git config --global color.ui 'auto'
-git config --global core.autocrlf 'input'
-git config --global core.editor 'vim'
+git config --global branch.autosetupmerge 'true' || true
+git config --global color.ui 'auto' || true
+git config --global core.autocrlf 'input' || true
+git config --global core.editor 'vim' || true
 # shellcheck disable=SC2088
-git config --global core.excludesfile '~/.gitignore_global'
-git config --global diff.mnemonicprefix 'true'
-git config --global init.defaultBranch 'main'
-git config --global pull.rebase 'false'
-git config --global push.default 'current'
-git config --global push.followTags 'true'
-git config --global rerere.enabled 'true'
-git config --global user.email 'mcornick@mcornick.com'
-git config --global user.name 'Mark Cornick'
+git config --global core.excludesfile '~/.gitignore_global' || true
+git config --global diff.mnemonicprefix 'true' || true
+git config --global init.defaultBranch 'main' || true
+git config --global pull.rebase 'false' || true
+git config --global push.default 'current' || true
+git config --global push.followTags 'true' || true
+git config --global rerere.enabled 'true' || true
+git config --global user.email 'mcornick@mcornick.com' || true
+git config --global user.name 'Mark Cornick' || true
 touch "$HOME/bootstrap.sh.local"
 . "$HOME/bootstrap.sh.local"
