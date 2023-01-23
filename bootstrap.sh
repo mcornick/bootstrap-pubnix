@@ -104,4 +104,5 @@ git config --global rerere.enabled 'true' || true
 git config --global user.email 'mcornick@mcornick.com' || true
 git config --global user.name 'Mark Cornick' || true
 touch "$HOME/bootstrap.sh.local"
+# shellcheck disable=SC1091
 . "$HOME/bootstrap.sh.local"
